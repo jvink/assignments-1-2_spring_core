@@ -1,17 +1,18 @@
 package com.jvink.assignments12_spring_core.models;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class StringDTOTest {
-    private String testString;
-    private Number testCount;
+    static private String testString;
+    static private Number testCount;
 
-    @BeforeEach
-    void setup() {
+    @BeforeAll
+    static void setup() {
         testString = "this is a test string";
         testCount = 5;
     }
@@ -38,8 +39,8 @@ public class StringDTOTest {
         assertThat(count).isEqualTo(testCount);
     }
 
-    @AfterEach
-    void tearDown() {
+    @AfterAll
+    static void tearDown() {
         testString = null;
         testCount = null;
     }
