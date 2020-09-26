@@ -19,8 +19,12 @@ public class StringService {
         this.stringRepository = stringRepository;
     }
 
-    public String reverseString(StringDTO stringDTO) {
-        return new StringBuilder(stringDTO.getName()).reverse().toString();
+    public String reverseString(String name) {
+        return new StringBuilder(name).reverse().toString();
+    }
+
+    public String encapsulateString(String name) {
+        return name.toUpperCase();
     }
 
     public void saveString(StringDTO stringDTO) {

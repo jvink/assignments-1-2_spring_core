@@ -20,8 +20,14 @@ public class StringController {
 
     @PostMapping
     @RequestMapping("reverseString")
-    public @ResponseBody String reverseString(@RequestBody StringDTO stringDTO) {
-        return stringService.reverseString(stringDTO);
+    public @ResponseBody String reverseString(@RequestBody String name) {
+        return stringService.reverseString(name);
+    }
+
+    @PostMapping
+    @RequestMapping("encapsulateString")
+    public @ResponseBody String encapsulateString(@RequestBody String name) {
+        return stringService.encapsulateString(name);
     }
 
     @PostMapping

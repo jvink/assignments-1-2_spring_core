@@ -9,5 +9,4 @@ class Assignments12SpringCoreApplicationTests {
 	@Test
 	void contextLoads() {
 	}
-
 }
